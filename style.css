@@ -400,3 +400,16 @@ nav a:hover,.nav a:hover{
     min-width: 22px !important;
     line-height: 1 !important;
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
