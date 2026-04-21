@@ -1,0 +1,402 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+    background:rgba(255, 255, 255, 0.774);
+}
+
+.box,.header-box{
+    background:#000;
+    color:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:15px 30px;
+}
+
+.box span,.logo span{
+    color:orange;
+}
+
+.logo{
+    margin:0;
+    font-size:2rem;
+    color:#ffffff;
+}
+
+nav,.nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav a,.nav a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover,.nav a:hover{
+    color:orange;
+}
+
+.search-container{
+    display:flex;
+    align-items:center;
+    min-width:320px;
+    margin-left:auto;
+    margin-right:30px;
+}
+
+.search-container input{
+    width:260px;
+    border:2px solid #333;
+    border-radius:8px 0 0 8px;
+}
+
+.search-container button{
+    padding:8px 20px;
+    border-radius:0 8px 8px 0;
+}
+
+.banner{
+    text-align:center;
+    color:#ffffff;
+    padding:120px 20px;
+}
+
+.banner button{
+    background:red;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    transition:.3s;
+}
+
+.banner button:hover{
+    background:orange;
+    cursor:pointer;
+}
+
+.carousel img{
+    width:100%;
+    height:400px;
+    object-fit:contain;
+    background:#000;
+}
+
+.productos h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:30px 20px;
+}
+
+.card{
+    width:220px;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    padding:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    background:#f8f8f8;
+    padding:10px;
+}
+
+.card h3{
+    font-size:1.1rem;
+    margin:10px 0 5px;
+}
+
+.card p{
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.card button{
+    width:100%;
+    background:orange;
+    border:none;
+    padding:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.card button:hover{
+    background:rgb(19, 180, 46);
+    color:#fff;
+}
+
+.card button:active{
+    transform:scale(.95);
+}
+
+.ofertas{
+    background:red;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:150px;
+    background:#fff;
+    border-radius:5px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:10px;
+    margin:0;
+    color:#000;
+}
+
+.dropdown-menu a:hover{
+    background:#f0f0f0;
+    color:orange;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+.contacto,.footer{
+    background:#000;
+    color:#fff;
+    padding:50px 20px;
+}
+
+.footer-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:70px;
+}
+
+.footer-col{
+    display:flex;
+    flex-direction:column;
+    min-width:180px;
+}
+
+.footer-col h3{
+    color:orange;
+    margin-bottom:15px;
+}
+
+.footer-col a,
+.footer-col p{
+    display:block;
+    margin-bottom:10px;
+    color:#ccc;
+    text-decoration:none;
+}
+
+.footer-col a:hover,
+.social-icons a:hover{
+    color:orange;
+}
+
+.social-icons a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.footer-bottom{
+    margin-top:30px;
+    padding-top:20px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid #333;
+}
+
+@media(max-width:768px){
+    .footer-container{
+        text-align:center;
+    }
+}
+
+.cards{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 25px !important;
+}
+
+.cards .card{
+    width: 220px !important;
+    flex: 0 0 auto !important;
+}
+
+.card{
+    text-align: center;
+}
+
+/* ===== CARRITO DE COMPRAS ===== */
+.header {
+    position: relative;
+}
+
+.carrito-wrapper {
+    position: relative;
+}
+
+#contenedor-carrito {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    width: 520px;
+    z-index: 9999;
+    padding: 15px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+#contenedor-carrito::before {
+    content: "Tu carrito";
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid orange;
+}
+
+#lista-carrito {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lista-carrito thead tr {
+    background: #000;
+    color: #fff;
+}
+
+#lista-carrito th {
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+#lista-carrito tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+#lista-carrito tbody tr:hover {
+    background: #f9f9f9;
+}
+
+#lista-carrito td {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+}
+
+#lista-carrito td img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+    background: #f5f5f5;
+    padding: 3px;
+}
+
+#lista-carrito .eliminar {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#lista-carrito .eliminar:hover {
+    color: darkred;
+}
+
+#total-carrito {
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+}
+
+.carrito {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.carrito-count {
+    background: orange;
+    color: #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.carrito-count {
+    background: orange !important;
+    color: #000 !important;
+    border-radius: 50% !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    min-width: 22px !important;
+    line-height: 1 !important;
+}
